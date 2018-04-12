@@ -5,7 +5,7 @@
     export default {
         data() {
             return {
-                message: 'components'
+                message: 'Example component loaded'
             }
         }
     }

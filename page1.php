@@ -6,7 +6,8 @@
 <body>
 <div id="app">
     <div>{{ message }}</div>
-    <script type="text/javascript" src="dist/page2.js"></script>
+
 </div>
+<script type="text/javascript" src="dist/page2.js"></script>
 </body>
 </html>

@@ -3,8 +3,8 @@ var path = require('path');
 
 module.exports = {
     entry: {
-        vendor: ['vue'],
-        bundle: './scripts/js/app.js',
+        vendor: ['vue', 'jquery'],
+        index: './scripts/js/app.js',
         page2: './scripts/js/page1.js'
     },
     output: {
@@ -25,8 +25,19 @@ module.exports = {
             }
         ]
     },
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                commons: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: 'vendor',
+                    chunks: 'all'
+                }
+            }
+        }
+    },
     plugins: [
-        new webpack.optimize.SplitChunksPlugin('vendor')
+
 ],
     resolve: {
         alias: {
